@@ -1,3 +1,5 @@
+(() => {
+'use strict';
 const permutationsWithRepetition = (n, as) =>
   as.length > 0 ? (
     foldl1(curry(cartesianProduct)(as), replicate(n, as))
@@ -109,3 +111,4 @@ const asString = xs => {
 
   return ns[0] === '+' ? tail(ns) : ns;
 };
+})();
